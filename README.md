@@ -66,7 +66,7 @@ To examine whether how an order was fulfilled relates to how customers rated it,
 Average ratings are fairly close across all five statuses (roughly 2.9 to 3.5), and the boxplot shows heavy overlap in the interquartile ranges — so, at this sample size, order outcome doesn't show a strong relationship with how customers rated their experience. Processing and Delivered orders edge slightly higher on average, while Returned and Shipped trend a little lower, but the wide spread (SD around 0.6–1.7) means these differences aren't dramatic. A larger dataset would be needed to confirm whether this pattern holds. 
 ## <img width="690" height="425" alt="Screenshot 2026-07-14 150006" src="https://github.com/user-attachments/assets/0be54e01-01da-484c-83a8-ba9663c3b4d8" />
 
-####  Key Takeaway
+######  Key Takeaway
 #  ● dmy() from lubridate correctly parses DD/MM/YYYY dates — a common format in Kenyan business data — into R's native Date class, enabling date arithmetic and time-series analysis.
  # ● Replacing missing CustomerRating values with the median (rather than dropping rows) preserves all 50 orders while avoiding the influence of outlier ratings. 
 # ● The pipe operator (%>%) chains both mutate() calls into a single readable transformation pipeline, a core tidyverse convention used throughout DDMA Paper 10 coursework. 
