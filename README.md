@@ -67,13 +67,13 @@ Average ratings are fairly close across all five statuses (roughly 2.9 to 3.5), 
 ## <img width="690" height="425" alt="Screenshot 2026-07-14 150006" src="https://github.com/user-attachments/assets/0be54e01-01da-484c-83a8-ba9663c3b4d8" />
 
 ####  Key Takeaway
- ● dmy() from lubridate correctly parses DD/MM/YYYY dates — a common format in Kenyan business data — into R's native Date class, enabling date arithmetic and time-series analysis.
- ● Replacing missing CustomerRating values with the median (rather than dropping rows) preserves all 50 orders while avoiding the influence of outlier ratings. 
-● The pipe operator (%>%) chains both mutate() calls into a single readable transformation pipeline, a core tidyverse convention used throughout DDMA Paper 10 coursework. 
-● summary(df_clean) confirms the cleaning worked: 0 missing CustomerRating values remain, and OrderDate is now a genuine Date type rather than text. 
-● group_by() + summarize() + arrange() turns the cleaned transaction-level data into a ranked city performance table in four lines — the same pattern generalizes to grouping by ProductCategory, PaymentMethod, or OrderStatus. 
-● ggplot2's grammar (aes, geom_col, geom_line, geom_boxplot, theme_minimal) turns each grouped summary into a clear chart with minimal code — reorder() + coord_flip() is a reusable trick for readable horizontal bar charts. 
-● Payment method and order-status-vs-rating analyses both show relatively even distributions in this 50-row sample — a reminder that patterns which look meaningful in a chart should be checked against sample size before drawing firm conclusions. 
+#  ● dmy() from lubridate correctly parses DD/MM/YYYY dates — a common format in Kenyan business data — into R's native Date class, enabling date arithmetic and time-series analysis.
+ # ● Replacing missing CustomerRating values with the median (rather than dropping rows) preserves all 50 orders while avoiding the influence of outlier ratings. 
+# ● The pipe operator (%>%) chains both mutate() calls into a single readable transformation pipeline, a core tidyverse convention used throughout DDMA Paper 10 coursework. 
+# ● summary(df_clean) confirms the cleaning worked: 0 missing CustomerRating values remain, and OrderDate is now a genuine Date type rather than text. 
+# ● group_by() + summarize() + arrange() turns the cleaned transaction-level data into a ranked city performance table in four lines — the same pattern generalizes to grouping by ProductCategory, PaymentMethod, or OrderStatus. 
+# ● ggplot2's grammar (aes, geom_col, geom_line, geom_boxplot, theme_minimal) turns each grouped summary into a clear chart with minimal code — reorder() + coord_flip() is a reusable trick for readable horizontal bar charts. 
+# ● Payment method and order-status-vs-rating analyses both show relatively even distributions in this 50-row sample — a reminder that patterns which look meaningful in a chart should be checked against sample size before drawing firm conclusions. 
 
  #### KEY INSIGHTS
 The project can reveal the highest revenue-generating product categories.
